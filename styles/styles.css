@@ -24,8 +24,7 @@
   --font-size-reg: 30px;
   --font-size-md: 25px;
   --font-size-sm: 20px;
-  --font-size-xsm: 24px;
-  --font-size-xxsm: 16px;
+  --font-size-xsm: 16px;
   --line-height-title: 84px;
   --line-height-banner-text: 56px;
   --line-height-text: 43px;
@@ -43,13 +42,13 @@
 /*Bootstrap overwrite 
     ===============================*/
 .text-primary {
-  color: #0C3C61FF !important;
+  color: #0c3c61 !important;
 }
 .text-secondary {
   color: #125D95FF !important;
 }
 .btn-primary {
-  width: 200px; 
+  width: 230px; 
   height: 79px; 
   padding: 0 12px; 
   display: flex; 
@@ -140,7 +139,7 @@ background: #00000000; /* transparent */
 header {
   background-image: url('../images/image_720.png');
   background-size: cover;
-
+  background-attachment: fixed;
   color: white;
   height: 100dvh;
 }
@@ -169,11 +168,13 @@ nav {
 #banner-title h1 {
   font-family: var(--font-family-title);
   font-size: var(--font-size-xlg);
+  line-height: var(--line-height-title);
 }
 #banner-text p {
   font-family: var(--font-family-text);
   font-size: var(--font-size-md);
   font-weight: 300;
+  line-height: var(--line-height-text);
 }
 #banner-text {
   width: 70%;
@@ -181,21 +182,58 @@ nav {
 
 /* Main */
 /*=======================*/
+#abount-cont {
+
+}
 #about h1 {
   font-family: var(--font-family-title);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xlg);
   font-weight: 600;
 }
 #about p {
   font-family: var(--font-family-text);
-  font-size: var(--font-size-sm);
+  font-size: 23px;
   font-weight: 400;
+  line-height: var(--line-height-text);
 }
 .color-bold {
   font-weight: 500;
 }
 .img-col img {
-  width: 100%;
+  width: 90%;
   height: auto;
   object-fit: cover;
 }
+footer {
+  background-color: #123651;
+}
+footer h3 {
+  font-family: 'Alexandria';
+  opacity: 0.9;
+  line-height: var(--line-height-banner-text);
+}
+footer p {
+  font-family: 'Poppins';
+  font-size: var(--font-size-sm);
+  opacity: 0.9;
+  line-height: var(--line-height-text);
+}
+.socials a {
+  color: inherit;
+  text-decoration: none;
+}
+.socials a {
+  transform: scale(1.2);
+  transition: all .3s ease-in-out;
+}
+.lumi {
+  transform: rotate(15deg);
+  animation: lumi 1s infinite;
+}
+@keyframes lumi {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+ 
