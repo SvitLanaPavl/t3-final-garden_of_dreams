@@ -18,16 +18,17 @@
    ============================= */
 :root {
   --font-family-title: 'Alexandria';
-  --font-family-text: 'Roboto';
-  --font-size-xlg: 64px;
-  --font-size-lg: 48px;
-  --font-size-md: 40px;
-  --font-size-sm: 32px;
+  --font-family-text: 'Poppins';
+  --font-size-xlg: 54px;
+  --font-size-lg: 40px;
+  --font-size-reg: 30px;
+  --font-size-md: 25px;
+  --font-size-sm: 20px;
   --font-size-xsm: 24px;
   --font-size-xxsm: 16px;
   --line-height-title: 84px;
   --line-height-banner-text: 56px;
-  --line-height-text: 48px;
+  --line-height-text: 43px;
 }
 
 /*Bootstrap overwrite 
@@ -39,16 +40,16 @@
   color: #125D95FF !important;
 }
 .btn-primary {
-  width: 253px; 
+  width: 200px; 
   height: 79px; 
   padding: 0 12px; 
   display: flex; 
   align-items: center; 
   justify-content: center; 
-  font-family: 'Roboto'; 
-  font-size: var(--font-size-sm); 
+  font-family: 'Poppins'; 
+  font-size: var(--font-size-reg); 
   line-height: var(--line-height-text); 
-  font-weight: 400; 
+  font-weight: 300; 
   color: #FFFFFFFF;
   background: #00000000;
   opacity: 1; 
@@ -82,7 +83,7 @@ background: #00000000; /* transparent */
   display: flex; 
   align-items: center; 
   justify-content: center; 
-  font-family: 'Roboto'; 
+  font-family: var(--font-family-text); 
   font-size: var(--font-size-sm); 
   line-height: var(--line-height-text); 
   font-weight: 400; 
@@ -108,23 +109,60 @@ background: #00000000; /* transparent */
   opacity: 0.4; 
 }
 .btn-tertiary {
-  width: 354px; 
-  height: 90px; 
+  width: 130px; 
+  height: 50px; 
   padding: 0 12px; 
   display: flex; 
   align-items: center; 
   justify-content: center; 
-  font-family: 'Roboto'; 
+  font-family: var(--font-family-text); 
   font-size: var(--font-size-sm); 
-  line-height: var(--line-height-text); 
-  font-weight: 400; 
+  line-height: var(--line-height-text);
+  font-weight: 200;
   color: #FFFFFFFF; /* white */
   background: #00000000; /* transparent */
-  opacity: 1; 
-  border-radius: 4px; /* border-m */
+  opacity: 1;
   border-width: 1px; 
   border-color: #FFFFFFFF; /* white */
   border-style: solid; 
 }
 
 /* 1. HOME */
+header {
+  background-image: url('../images/image_720.png');
+  background-size: cover;
+
+  color: white;
+  height: 100dvh;
+}
+.overlay {
+  background: #171A1F75;
+  height: 100dvh;
+}
+nav {
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-sm);
+  font-weight: 200;
+
+}
+.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler, .navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3e%3cpath stroke="%23FFFFFF" stroke-linecap="round" stroke-miterlimit="15" stroke-width="1" d="M4 7h30M4 15h30M4 23h30"/%3e%3c/svg%3e');
+}
+#banner {
+  width: 85%;
+  height: 75%;
+}
+#banner-title h1 {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-xlg);
+}
+#banner-text p {
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-md);
+  font-weight: 300;
+}
