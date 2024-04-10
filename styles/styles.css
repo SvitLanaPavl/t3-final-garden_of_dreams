@@ -3,9 +3,8 @@
 ------- Bootstrap Overwrite
 
 /* SUMMARY HOME
-    1. BASE
-    2. HOME
-    3. Explore
+    1. HOME
+    2. EXPLORE
 */
 
 /*** 1. GLOBAL ***/
@@ -33,39 +32,39 @@
 
 /*Bootstrap overwrite 
     ===============================*/
-    .text-primary {
-      color: #0C3C61FF !important;
-    }
-    .text-secondary {
-      color: #125D95FF !important;
-    }
-    .btn-primary {
-        width: 253px; 
-        height: 79px; 
-        padding: 0 12px; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        font-family: 'Roboto'; 
-        font-size: var(--font-size-sm); 
-        line-height: var(--line-height-text); 
-        font-weight: 400; 
-        color: #FFFFFFFF;
-        background: #00000000;
-        opacity: 1; 
-        border-radius: 0px; 
-        border-width: 1px; 
-        border-color: #FFFFFFFF;
-        border-style: solid;
-    }
-    .btn-primary:hover {
-      color: #DEE1E6FF; /* neutral-300 */
-      background: #00000000; /* transparent */
-    }
-    /* Hover */
-    .btn-primary:hover {
+.text-primary {
+  color: #0C3C61FF !important;
+}
+.text-secondary {
+  color: #125D95FF !important;
+}
+.btn-primary {
+  width: 253px; 
+  height: 79px; 
+  padding: 0 12px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-family: 'Roboto'; 
+  font-size: var(--font-size-sm); 
+  line-height: var(--line-height-text); 
+  font-weight: 400; 
+  color: #FFFFFFFF;
+  background: #00000000;
+  opacity: 1; 
+  border-radius: 0px; 
+  border-width: 1px; 
+  border-color: #FFFFFFFF;
+  border-style: solid;
+}
+.btn-primary:hover {
   color: #DEE1E6FF; /* neutral-300 */
   background: #00000000; /* transparent */
+}
+/* Hover */
+.btn-primary:hover {
+color: #DEE1E6FF; /* neutral-300 */
+background: #00000000; /* transparent */
 }
 /* Pressed */
 .btn-primary:hover:active {
@@ -76,31 +75,31 @@
 .btn-primary:disabled {
   opacity: 0.4; 
 }
-    .btn-secondary {
-        width: 253px; 
-        height: 79px; 
-        padding: 0 12px; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        font-family: 'Roboto'; 
-        font-size: var(--font-size-sm); 
-        line-height: var(--line-height-text); 
-        font-weight: 400; 
-        color:  #0C3C61FF;
-        background: #00000000;
-        opacity: 1; 
-        border-radius: 0px; 
-        border-width: 1px; 
-        border-color:  #0C3C61FF;
-        border-style: solid;
-    }
-    .btn-secondary:hover {
-      color: #0C3C61FF; /* info-800 */
-      background: #00000000; /* transparent */
-    }
+.btn-secondary {
+  width: 253px; 
+  height: 79px; 
+  padding: 0 12px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-family: 'Roboto'; 
+  font-size: var(--font-size-sm); 
+  line-height: var(--line-height-text); 
+  font-weight: 400; 
+  color:  #0C3C61FF;
+  background: #00000000;
+  opacity: 1; 
+  border-radius: 0px; 
+  border-width: 1px; 
+  border-color:  #0C3C61FF;
+  border-style: solid;
+}
+.btn-secondary:hover {
+  color: #0C3C61FF; /* info-800 */
+  background: #00000000; /* transparent */
+}
     /* Pressed */
-    .btn-secondary:hover:active {
+.btn-secondary:hover:active {
   color: #0C3C61FF; /* info-800 */
   background: #00000000; /* transparent */
 }
@@ -127,3 +126,5 @@
   border-color: #FFFFFFFF; /* white */
   border-style: solid; 
 }
+
+/* 1. HOME */
