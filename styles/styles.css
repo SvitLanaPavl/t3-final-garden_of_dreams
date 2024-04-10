@@ -93,15 +93,15 @@ background: #00000000; /* transparent */
   align-items: center; 
   justify-content: center; 
   font-family: var(--font-family-text); 
-  font-size: var(--font-size-sm); 
+  font-size: var(--font-size-md); 
   line-height: var(--line-height-text); 
-  font-weight: 400; 
-  color:  #0C3C61FF;
+  font-weight: 300; 
+  color:  #125D95FF;
   background: #00000000;
   opacity: 1; 
   border-radius: 0px; 
   border-width: 1px; 
-  border-color:  #0C3C61FF;
+  border-color:  #125D95FF;
   border-style: solid;
 }
 .btn-secondary:hover {
@@ -193,4 +193,9 @@ nav {
 }
 .color-bold {
   font-weight: 500;
+}
+.img-col img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
