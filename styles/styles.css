@@ -30,6 +30,15 @@
   --line-height-banner-text: 56px;
   --line-height-text: 43px;
 }
+/* Base
+   ======================= */
+   *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
 
 /*Bootstrap overwrite 
     ===============================*/
@@ -155,7 +164,7 @@ nav {
 }
 #banner {
   width: 85%;
-  height: 75%;
+  height: 68%;
 }
 #banner-title h1 {
   font-family: var(--font-family-title);
@@ -165,4 +174,23 @@ nav {
   font-family: var(--font-family-text);
   font-size: var(--font-size-md);
   font-weight: 300;
+}
+#banner-text {
+  width: 70%;
+}
+
+/* Main */
+/*=======================*/
+#about h1 {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+#about p {
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+}
+.color-bold {
+  font-weight: 500;
 }
