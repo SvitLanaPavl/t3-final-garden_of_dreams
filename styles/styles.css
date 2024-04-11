@@ -17,6 +17,7 @@
 /* Variables
    ============================= */
 :root {
+  --scroll: 0;
   --font-family-title: 'Alexandria';
   --font-family-text: 'Poppins';
   --font-size-xlg: 54px;
@@ -67,18 +68,27 @@
   border-style: solid;
 }
 .btn-primary:hover {
-  color: #DEE1E6FF; /* neutral-300 */
-  background: #00000000; /* transparent */
+  color: white;
+  background: rgb(255, 65, 65);
+  border-color:  rgb(255, 65, 65);
+  opacity: 0.8;
+  transition: 0.4s ease-in-out;
 }
 /* Hover */
-.btn-primary:hover {
-color: #DEE1E6FF; /* neutral-300 */
-background: #00000000; /* transparent */
+.btn-primary:focus {
+  color: white;
+  background: rgb(255, 65, 65);
+  border-color:  rgb(255, 65, 65);
+  opacity: 0.8;
+  transition: 0.4s ease-in-out;
 }
 /* Pressed */
 .btn-primary:hover:active {
-  color: #BDC1CAFF; /* neutral-400 */
-  background: #00000000; /* transparent */
+  color: white;
+  background: rgb(255, 65, 65);
+  border-color:  rgb(255, 65, 65);
+  opacity: 0.8;
+  transition: 0.4s ease-in-out;/
 }
 /* Disabled */
 .btn-primary:disabled {
@@ -95,17 +105,19 @@ background: #00000000; /* transparent */
   font-size: var(--font-size-md); 
   line-height: var(--line-height-text); 
   font-weight: 300; 
-  color:  #125D95FF;
+  color:  rgb(255, 65, 65);
   background: #00000000;
   opacity: 1; 
-  border-radius: 0px; 
+  border-radius: 5px; 
   border-width: 1px; 
-  border-color:  #125D95FF;
+  border-color:  rgb(255, 65, 65);
   border-style: solid;
 }
-.btn-secondary:hover {
-  color: #0C3C61FF; /* info-800 */
-  background: #00000000; /* transparent */
+.btn-secondary:hover,  .btn-secondary:active, .btn-secondary:focus{
+  color: white;
+  background: rgb(255, 65, 65);
+  opacity: 0.9;
+  transition: 0.4s ease-in-out;
 }
     /* Pressed */
 .btn-secondary:hover:active {
@@ -152,7 +164,6 @@ nav {
   font-family: var(--font-family-text);
   font-size: var(--font-size-sm);
   font-weight: 200;
-
 }
 .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler, .navbar-toggler-icon:focus {
   outline: none;
@@ -162,11 +173,25 @@ nav {
 .navbar-toggler-icon {
   background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3e%3cpath stroke="%23FFFFFF" stroke-linecap="round" stroke-miterlimit="15" stroke-width="1" d="M4 7h30M4 15h30M4 23h30"/%3e%3c/svg%3e');
 }
+.nav-link {
+  color: white;
+}
+.nav-link:hover, .nav-link:active, .nav-link:focus {
+  color: #FF2849;
+  scale: 1.1;
+  transition: all 0.4s ease-in-out;
+}
+.nav-link button:hover {
+  color: white;
+  background: rgb(255, 65, 65);
+  opacity: 0.8;
+  transition: 0.4s ease-in-out;
+  border: 1px solid rgb(255, 65, 65);
+}
 #banner {
   width: 85%;
   height: 68%;
 }
-
 #banner-title h1 {
   font-family: var(--font-family-title);
   font-size: var(--font-size-xlg);
@@ -221,6 +246,7 @@ nav {
   font-size: 23px;
   font-weight: 400;
   line-height: var(--line-height-text);
+  text-justify: inter-word;
 }
 .color-bold {
   font-weight: 500;
