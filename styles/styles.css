@@ -141,7 +141,8 @@ header {
   background-size: cover;
   background-attachment: fixed;
   color: white;
-  height: 100dvh;
+  
+
 }
 .overlay {
   background: #171A1F75;
@@ -165,6 +166,7 @@ nav {
   width: 85%;
   height: 68%;
 }
+
 #banner-title h1 {
   font-family: var(--font-family-title);
   font-size: var(--font-size-xlg);
@@ -179,7 +181,31 @@ nav {
 #banner-text {
   width: 70%;
 }
+@media screen and (max-width: 768px) {
+ header, .overlay {
+  height: 118dvh;
+ }
 
+  #banner {
+    height: 75%;
+    width: 100%;
+  }
+  #banner-text {
+    width: 100%;
+  }
+  #banner-title h1 {
+    font-size: 50px;
+  }
+  #banner-text p {
+    font-size: 23px;
+  }
+  .btn-primary {
+    width: 200px; 
+    height: 70px; 
+    padding: 0 10px;
+    font-size: 23px;
+  }
+}
 /* Main */
 /*=======================*/
 #abount-cont {
@@ -218,11 +244,16 @@ footer p {
   opacity: 0.9;
   line-height: var(--line-height-text);
 }
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .socials a {
   color: inherit;
   text-decoration: none;
 }
-.socials a {
+.socials a:hover {
   transform: scale(1.2);
   transition: all .3s ease-in-out;
 }
@@ -235,5 +266,7 @@ footer p {
   50% { transform: rotate(15deg); }
   100% { transform: rotate(0deg); }
 }
-
+.copyright {
+  font-size: var(--font-size-xsm);
+}
  
