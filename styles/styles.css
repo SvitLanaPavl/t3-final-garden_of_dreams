@@ -128,6 +128,10 @@
 .btn-secondary:disabled {
   opacity: 0.4; 
 }
+.btn-secondary a {
+  text-decoration: none;
+  color: inherit;
+}
 .btn-tertiary {
   width: 130px; 
   height: 50px; 
@@ -146,16 +150,19 @@
   border-color: #FFFFFFFF; /* white */
   border-style: solid; 
 }
+#navbar-explore .btn-tertiary {
+  color: #0C3C61FF;
+  border-color: #0C3C61FF;
+}
 
 /* 1. HOME */
-header {
+#header-banner {
   background-image: url('../images/image_720.png');
   background-size: cover;
   background-attachment: fixed;
   color: white;
-  
-
 }
+
 .overlay {
   background: #171A1F75;
   height: 100dvh;
@@ -170,15 +177,33 @@ nav {
   box-shadow: none;
   border: 0;
 }
-.navbar-toggler-icon {
+#header-banner .navbar-toggler-icon {
   background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3e%3cpath stroke="%23FFFFFF" stroke-linecap="round" stroke-miterlimit="15" stroke-width="1" d="M4 7h30M4 15h30M4 23h30"/%3e%3c/svg%3e');
 }
-.nav-link {
+#navbar-explore .navbar-toggler-icon {
+  background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3e%3cpath stroke="%230C3C61FF" stroke-linecap="round" stroke-miterlimit="15" stroke-width="1" d="M4 7h30M4 15h30M4 23h30"/%3e%3c/svg%3e');
+}
+#header-banner .nav-link {
   color: white;
 }
-.nav-link:hover, .nav-link:active, .nav-link:focus {
+#navbar-explore .nav-link {
+  color: #0C3C61FF;
+}
+#navbar-explore .nav-link:hover, #navbar-explore .nav-link:active, #navbar-explore .nav-link:focus {
   color: #FF2849;
-  scale: 1.1;
+  scale: 0.9;
+  transition: all 0.4s ease-in-out;
+}
+#navbar-explore .nav-link button:hover {
+  color: white;
+  background: rgb(255, 65, 65);
+  opacity: 0.8;
+  transition: 0.4s ease-in-out;
+  border: 1px solid rgb(255, 65, 65);
+}
+#header-banner .nav-link:hover, .nav-link:active, .nav-link:focus {
+  color: #FF2849;
+  scale: 0.9;
   transition: all 0.4s ease-in-out;
 }
 .nav-link button:hover {
@@ -207,7 +232,7 @@ nav {
   width: 70%;
 }
 @media screen and (max-width: 768px) {
- header, .overlay {
+  #header-banner .overlay {
   height: 118dvh;
  }
 
@@ -294,5 +319,18 @@ footer p {
 }
 .copyright {
   font-size: var(--font-size-xsm);
+}
+/* Explore */
+/*=======================*/
+.logo-img img:hover {
+  scale: 1.1;
+  transition: all 0.4s ease-in-out; 
+}
+
+#explore-map h1 {
+  font-family: 'Alexandria';
+  font-size: var(--font-size-xlg);
+  font-weight: 700;
+  color: #6A1313FF;
 }
  
