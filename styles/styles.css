@@ -48,6 +48,9 @@
 .text-secondary {
   color: #125D95FF !important;
 }
+.bg-primary {
+  background-color: #E8684F !important;
+}
 .btn {
   border-radius: 0px;
 }
@@ -100,6 +103,10 @@
 .btn-primary:disabled {
   opacity: 0.4; 
 }
+.btn-primary a {
+  text-decoration: none;
+  color: inherit;
+}
 .btn-secondary {
   width: 253px; 
   height: 79px; 
@@ -151,10 +158,10 @@
   border-color: #FFFFFFFF; /* white */
   border-style: solid; 
 }
-#navbar-explore .btn-tertiary {
+/*#navbar-explore .btn-tertiary {
   color: #0C3C61FF;
   border-color: #0C3C61FF;
-}
+}*/
 .btn-group {
   width: 330px;
 }
@@ -179,6 +186,8 @@
 
 .overlay {
   background: #171A1F75;
+}
+#header-banner .overlay {
   height: 100dvh;
 }
 nav {
@@ -191,18 +200,20 @@ nav {
   box-shadow: none;
   border: 0;
 }
-#header-banner .navbar-toggler-icon {
+.navbar-toggler-icon {
   background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3e%3cpath stroke="%23FFFFFF" stroke-linecap="round" stroke-miterlimit="15" stroke-width="1" d="M4 7h30M4 15h30M4 23h30"/%3e%3c/svg%3e');
 }
+/*
 #navbar-explore .navbar-toggler-icon {
   background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3e%3cpath stroke="%230C3C61FF" stroke-linecap="round" stroke-miterlimit="15" stroke-width="1" d="M4 7h30M4 15h30M4 23h30"/%3e%3c/svg%3e');
-}
-#header-banner .nav-link {
+}*/
+.nav-link {
   color: white;
 }
+/*
 #navbar-explore .nav-link {
   color: #0C3C61FF;
-}
+}*/
 #navbar-explore .nav-link:hover, #navbar-explore .nav-link:active, #navbar-explore .nav-link:focus {
   color: #FF2849;
   scale: 0.9;
@@ -336,6 +347,9 @@ footer p {
 }
 /* Explore */
 /*=======================*/
+#explore-header {
+  background-image: url(../images/trees.jpeg);
+}
 .logo-img img:hover {
   scale: 1.1;
   transition: all 0.4s ease-in-out; 
@@ -367,7 +381,7 @@ footer p {
   transform: scale(1.1);
 }
 /* Dropdowns */
-.dropdown-section {
+.drop-down {
   display: flex;
   justify-content: center;
 }
