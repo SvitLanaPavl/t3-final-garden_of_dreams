@@ -385,7 +385,7 @@ footer p {
 }
 /* SVG hover effects */
 /* SVG hover effects */
-.svg-map path:hover {
+#explore-map path:hover {
   cursor: pointer;
 }
 
