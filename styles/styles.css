@@ -48,14 +48,22 @@
 .text-secondary {
   color: #125D95FF !important;
 }
+.text-tertiary {
+  color: rgb(255, 65, 65);
+}
 .bg-primary {
   background-color: #E8684F !important;
 }
+.bg-secondary {
+  background-color: #7F6C26 !important;
+}
 .btn {
   border-radius: 0px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .btn:hover, .btn:active, .btn:focus {
-  border-color: inherit;
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   outline: none;
 }
 .btn-primary {
@@ -349,6 +357,10 @@ footer p {
 /*=======================*/
 #explore-header {
   background-image: url(../images/trees.jpeg);
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: cover;
+  color: white;
 }
 .logo-img img:hover {
   scale: 1.1;
@@ -360,6 +372,11 @@ footer p {
   font-size: var(--font-size-xlg);
   font-weight: 700;
   color: #6A1313FF;
+}
+.invitation h2 {
+  font-family: 'Petit Formal Script';
+  font-size: var(--font-size-lg);
+  word-spacing: 15px;
 }
 @media screen and (max-width: 768px) {
   #explore-map h1 {
@@ -384,19 +401,63 @@ footer p {
 .drop-down {
   display: flex;
   justify-content: center;
+  font-family: 'Poppins';
 }
-
+.drop-down h6 {
+  font-family: 'Alexandria';
+  font-weight: 300;
+}
 /*Search */
 
-.group-search {
+/*.group-search {
   display: flex;
   line-height: 60px;
   align-items: center;
   position: relative;
   max-width: 330px;
- }
- 
- .input {
+ }*/
+
+ .dropdown-toggle::after {
+  display: none;
+}
+.dropdown a {
+  
+  font-weight: var(--font-weight-xlight);
+}
+.dropdown input {
+  background-color: transparent;
+  border: 0;
+  outline: none !important;
+  transition: .3s ease;
+}
+.dropdown input::placeholder {
+  
+  color: rgba(255, 255, 255, 0.5);
+}
+.dropdown input:focus, .dropdown input:active {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  outline: none !important;
+}
+.dropdown input:focus,
+.dropdown input:active {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+}
+.dropdown .btn {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+}
+.dropdown-menu {
+  max-height: 200px;
+  overflow-y: auto;
+}
+ /*.input {
   width: 100%;
   height: 80px;
   line-height: 28px;
@@ -427,4 +488,6 @@ footer p {
   fill: rgb(255, 65, 65);
   width: 1.4rem;
   height: 1.4rem;
- }
+ }*/
+
+ 
