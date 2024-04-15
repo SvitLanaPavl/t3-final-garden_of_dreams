@@ -131,3 +131,8 @@
   font-weight: 900;
   font-style: italic;
 }
+@font-face {
+  font-family: 'Petit Formal Script';
+  src: url('../fonts/PetitFormalScript-Regular.ttf');
+  font-weight: 400;
+}
