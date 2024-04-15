@@ -557,20 +557,20 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="images/natural.jpeg" class="d-block w-100" alt="...">
-      <div class="carousel-caption">
-        <p class="place-caption d-none d-md-block">Some name</p>
+      <div class="carousel-caption p-0">
+        <p class="place-caption d-none d-md-block p-0 mb-0">Some name</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="images/trees.jpeg" class="d-block w-100" alt="...">
-      <div class="carousel-caption">
-        <p class="place-caption d-none d-md-block">Some name</p>
+      <div class="carousel-caption p-0">
+        <p class="place-caption d-none d-md-block p-0 mb-0">Some name</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="images/image_720.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption">
-        <p class="place-caption d-none d-md-block">Some name</p>
+      <div class="carousel-caption p-0">
+        <p class="place-caption d-none d-md-block p-0 mb-0">Some name</p>
       </div>
     </div>
   </div>
@@ -585,23 +585,28 @@
 </div>
 <!-- State content -->
 <div class="content d-flex p-5">
-<div class="wording">
+<div class="row">
+<div class="wording col-md-6 row">
   <h2 class="text-secondary">State Name</h2>
-  <ul>
-    <li>Climate type - <span id="climate"></span></li>
-    <li>State Tree - <span id="state-tree"></span></li>
-    <li>State Flower - <span id="state-flower"></span></li>
+  <ul class="data-ul pt-4">
+    <li>Climate type - <span class="data-value text-primary" id="climate">Climate type</span></li>
+    <li>State Tree - <span class="data-value text-primary" id="state-tree">State tree</span></li>
+    <li>State Flower - <span class="data-value text-primary" id="state-flower">State flower</span></li>
     <li>Landmarks: 
       <ul class="landmarks">
-        <li>Landmark 1</li>
-        <li>Landmark 2</li>
+        <li class="data-value text-primary">Landmark 1</li>
+        <li class="data-value text-primary">Landmark 2</li>
       </ul>
     </li>
   </ul>
 </div>
-<div class="diagram"></div>
+<div class="diagram col-md-6 row">
+  <div class="graph pt-5 mt-md-5">
+    <img src="images/average-temperature-united-states-of-america-tulsa-oklahoma-us.png" class="img-fluid"/>
+  </div>
 </div>
-
+</div>
+</div>
   </section>
 
 </main>

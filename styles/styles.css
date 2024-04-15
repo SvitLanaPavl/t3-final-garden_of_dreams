@@ -456,6 +456,10 @@ footer p {
   max-height: 200px;
   overflow-y: auto;
 }
+/* Data display none originally */
+#data-display {
+  display: block; /*visible on click */
+}
 /* Carousel */
 .carousel {
   max-height: 50vh;
@@ -465,13 +469,51 @@ footer p {
 }
 .carousel-caption {
   background: #171A1F75;
-
-}
-.content {
+  width: 40%;
   font-family: 'Poppins';
+  font-size: var(--font-size-sm);
+  font-weight: 300;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 .wording h2 {
   font-family: 'Alexandria';
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+.data-value {
+  font-weight: 600;
+}
+.data-ul {
+  font-family: 'Poppins';
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  line-height: 50px;
+}
+@media (max-width: 768px) {
+  .wording h2 {
+    font-size: 35px;
+  }
+  .data-ul {
+    font-size: 23px;
+  }
+}
+ 
+/* For small screens, reset the width of both blocks to auto */
+@media (max-width: 767px) {
+  .wording,
+  .diagram {
+    width: auto !important;
+  }
 }
 
- 
+/* For larger screens, set each block to take up 50% of the parent width */
+@media (min-width: 768px) {
+  .wording,
+  .diagram {
+    width: 50%;
+  }
+}
