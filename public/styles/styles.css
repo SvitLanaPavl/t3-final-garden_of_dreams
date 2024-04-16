@@ -57,6 +57,14 @@
 .bg-secondary {
   background-color: #7F6C26 !important;
 }
+.bg-light {
+  background-color: #e8e8e8;
+}
+.card {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5rem;
+  border: none;
+}
 .btn {
   border-radius: 0px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -67,14 +75,14 @@
   outline: none;
 }
 .btn-primary {
-  width: 230px; 
-  height: 79px; 
+  width: 200px; 
+  height: 69px; 
   padding: 0 12px; 
   display: flex; 
   align-items: center; 
   justify-content: center; 
   font-family: 'Poppins'; 
-  font-size: var(--font-size-reg); 
+  font-size: var(--font-size-md); 
   line-height: var(--line-height-text); 
   font-weight: 300; 
   color: #FFFFFFFF;
@@ -116,16 +124,16 @@
   color: inherit;
 }
 .btn-secondary {
-  width: 240px; 
-  height: 70px; 
+  width: 200px; 
+  height: 67px; 
   padding: 0 12px; 
   display: flex; 
   align-items: center; 
   justify-content: center; 
   font-family: var(--font-family-text); 
-  font-size: var(--font-size-md); 
+  font-size: var(--font-size-sm); 
   line-height: var(--line-height-text); 
-  font-weight: 300; 
+  font-weight: 400; 
   color:  rgb(255, 65, 65);
   background: #00000000;
   opacity: 1;  
@@ -297,12 +305,12 @@ nav {
 }
 #about h1 {
   font-family: var(--font-family-title);
-  font-size: var(--font-size-xlg);
+  font-size: 50px;
   font-weight: 600;
 }
 #about p {
   font-family: var(--font-family-text);
-  font-size: 23px;
+  font-size: 22px;
   font-weight: 400;
   line-height: var(--line-height-text);
   text-justify: inter-word;
@@ -421,25 +429,37 @@ footer p {
   display: none;
 }
 .dropdown a {
-  
   font-weight: var(--font-weight-xlight);
 }
+
 .dropdown input {
   background-color: transparent;
   border: 0;
   outline: none !important;
   transition: .3s ease;
 }
+#search-bar {
+  color: white;
+}
+#search-bar:focus {
+  color: white;
+}
+#search-bar:active {
+  color: white;
+}
+#search-bar:focus:not(:focus-visible) {
+  color: white;
+}
 .dropdown input::placeholder {
-  
   color: rgba(255, 255, 255, 0.5);
 }
 .dropdown input:focus, .dropdown input:active {
   background-color: transparent;
-  border: 0;
+  border: 0px;
   color: white;
   outline: none !important;
 }
+
 .dropdown input:focus,
 .dropdown input:active {
     -webkit-appearance: none;
@@ -463,10 +483,11 @@ footer p {
 }
 /* Carousel */
 .carousel {
-  max-height: 50vh;
+  max-height: 47vh;
 }
 .carousel-item {
-  max-height: 50vh;
+  max-height: 47vh;
+  background-size: cover;
 }
 .carousel-caption {
   background: #171A1F75;
@@ -517,4 +538,10 @@ footer p {
   .diagram {
     width: 50%;
   }
+}
+#temp-chart {
+  min-height: 30vh;
+}
+.graph {
+  width: 100%;
 }
