@@ -16,7 +16,6 @@ function initializeSearchBar() {
       }
       let searchValue = $("#search-bar").val();
       let searchCode = getStateCode(searchValue);
-      console.log(searchCode);
       await populateDataPage(searchCode);
     }
   });

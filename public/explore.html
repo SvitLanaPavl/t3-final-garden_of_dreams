@@ -73,7 +73,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 pe-4">
         <h6 class="text-white">SEARCH FOR STATE</h6>
         <div class="dropdown mb-3">
-          <a class="rounded-0 btn dropdown-toggle text-start" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          <div class="rounded-0 btn text-start" role="button" aria-expanded="false"> <!-- dropdown-toggle data-toggle="dropdown" -->
             <div class="d-flex align-items-center">
             <span class="float-start me-3">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -82,7 +82,7 @@
       </span>
       <input type="text" class="form-control m-0" id="search-bar" placeholder="Search" aria-label="Search by keyword">
     </div>
-          </a>
+  </div>
           </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 pe-4">
@@ -97,7 +97,7 @@
       </span>
       </a>
     
-      <ul class="dropdown-menu rounded-0 w-100">
+      <ul class="dropdown-menu rounded-0 w-100" id="state-dropdown">
         <!-- Dynamic States Dropdown Goes Here -->
       </ul>
     </div>
