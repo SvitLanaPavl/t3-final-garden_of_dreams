@@ -124,16 +124,15 @@ export async function getTemps(code) {
 export async function getStateNamesByClimate(climateType) {
   const stateArray = [];
 
-  db.collection("states").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-      let docID = doc.id;
-      let docData = doc.data();
-      let docClimate = docData.climate;
+  const querySnapshot = await db.collection("states").get();
 
-      if (docClimate.includes(climateType)) {
-        stateArray.push(docID);
-      }
-    });
+  querySnapshot.forEach((doc) => {
+    let docData = doc.data();
+    let docClimate = docData.climate;
+
+    if (docClimate.includes(climateType) || climateType === "All") {
+      stateArray.push(docData.name);
+    }
   });
 
   return stateArray;
