@@ -33,7 +33,6 @@ async function populateStateDropdown(climateType = "All") {
     let newDropdownItem = $(`<li><a class="dropdown-item" href="#">${state}</a></li>`);
 
     newDropdownItem.on("click", async function() {
-      // To-Do: Change default text value of CHOOSE BY STATE dropdown
       $("#explore-map").hide();
       $("#data-display").show();
       $("#landmark-carousel").empty();
@@ -44,6 +43,7 @@ async function populateStateDropdown(climateType = "All") {
 
       let itemValue = newDropdownItem.text();
       let itemCode = getStateCode(itemValue);
+      $("#state-dropdown-default").text(itemValue);
       await populateDataPage(itemCode);
     })
 
@@ -53,9 +53,10 @@ async function populateStateDropdown(climateType = "All") {
 
 function addClimateFilterEvent() {
   // Change selector to climate dropdown ID when able
-  $(".dropdown-item").on("click", async function() {
-    // Add section here to change default text value of climate dropdown
+  $("#climate-dropdown .dropdown-item").on("click", async function() {
     const climateValue = this.text;
+    $("#climate-dropdown-default").text(climateValue);
+    $("#state-dropdown-default").text("Filtered");
     await populateStateDropdown(climateValue);
   });
 }
@@ -67,7 +68,6 @@ function initializeMap() {
 
   $("#svg a").on("click", async function(event) {
     const stateID = event.target.id;
-    console.log(stateID)
     $("#explore-map").hide();
     $("#data-display").show();
     $("#landmark-carousel").empty();
@@ -80,14 +80,14 @@ function initializeMap() {
   })
 }
 
-
 // Handle On Page Load Behavior
 $(document).ready(async function() {
   initializeSearchBar();
-  // await populateStateDropdown();
+  await populateStateDropdown();
   addClimateFilterEvent();
   initializeMap();
 
+  // Change Menu Icon on Open
   document.querySelector('.navbar-toggler-icon').addEventListener('click', function() {
     this.classList.toggle('cross');
   });

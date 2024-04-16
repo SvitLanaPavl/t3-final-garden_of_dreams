@@ -46,4 +46,10 @@ export async function populateDataPage(code) {
 
   $("#landmark-carousel").append(imgCarouselOne);
   $("#landmark-carousel").append(imgCarouselTwo);
+
+  // Back to Map Button
+  $("#map-button").on("click", function() {
+    $("#data-display").hide();
+    $("#explore-map").show();
+  })
 }
