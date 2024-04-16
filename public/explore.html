@@ -64,7 +64,7 @@
 </div>
 </header>
 <!-- Click a state to explore -->
-<main class="mt-0">
+<main class="mt-0 bg-light">
   <!-- Dropdown -->
   <section class="drop-down bg-secondary text-white p-4">
 
@@ -578,7 +578,7 @@
 
     </div>
   </section>
-  <section class="container-lg container-fluid p-5" id="data-display">
+  <section class="container-lg container-fluid p-4" id="data-display">
 <!-- Carousel -->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" id="landmark-carousel">
@@ -594,20 +594,20 @@
   </button>
 </div>
 <!-- State content -->
-<div class="content d-flex p-5">
+<div class="content card mt-3 d-flex p-5">
 <div class="row">
-<div class="wording col-md-6 row">
+<div class="wording col-lg-6 col-12">
   <h2 class="text-secondary" id="state-name">State Name</h2>
   <ul class="data-ul pt-4">
     <li>Climate type - <span class="data-value text-primary" id="climate">Climate type</span></li>
     <li>State Tree - <span class="data-value text-primary" id="state-tree">State tree</span></li>
     <li>State Flower - <span class="data-value text-primary" id="state-flower">State flower</span></li>
   </ul>
+  <button class="btn-secondary mt-5">Back to the map</button>
 </div>
-<div class="diagram col-md-6 row">
+<div class="diagram col-lg-6 col-12">
   <div class="graph pt-5 mt-md-5">
     <canvas id="temp-chart"></canvas>
-    <button class="btn-secondary mt-5">Back to the map</button>
   </div>
 </div>
 </div>
@@ -615,39 +615,39 @@
   </section>
 
 </main>
-  <!-- Footer -->
+    <!-- Footer -->
   <!--------------------------------->
-  <footer class="text-light ps-5 pt-5 pe-5 pb-2" id="footer">
-    <div class="d-flex col-sm-12 row pb-5 gap-5">
-      <div class="contact col-md-5 col-12">
-        <h3>Contact us</h3>
-        <div class="contact-person mb-3 d-flex">
-          <p class="col-lg-7 col-md-7 col-6 me-3 mb-0">Christopher Stephens</p>
-          <div class="socials col-lg-3 col-md-5 col-6">
-            <a href="https://www.linkedin.com/in/c-r-stephens/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:30px"></i></a>
-            <a href="https://github.com/Jtownokie" target="_blank"><i class="ms-3 fa fa-github-square" style="font-size:30px"></i></a>
-            <a href="#" target="_blank"><i class="ms-3 fa fa-laptop" style="font-size:30px"></i></a>
-          </div>
-        </div>
-        <div class="contact-person d-flex">
-          <p class="col-lg-6 col-md-7 col-6 me-3 mb-0">Svitlana Pavlovska</p>
-          <div class="socials col-md-5 col-6">
-            <a href="https://www.linkedin.com/in/svitlana-pavlovska-833b43184/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:30px"></i></a>
-            <a href="https://github.com/SvitLanaPavl" target="_blank"><i class="ms-3 fa fa-github-square" style="font-size:30px"></i></a>
-            <a href="https://svitlanapavl.github.io/Portfolio/" target="_blank"><i class="ms-3 fa fa-laptop" style="font-size:30px"></i></a>
-          </div>
+<footer class="text-light ps-5 pt-5 pe-5 pb-2" id="footer">
+  <div class=" container d-flex col-sm-12 row pb-5 gap-5">
+    <div class="container contact col-md-5 col-12">
+      <h3>Contact us</h3>
+      <div class="contact-person mb-3 d-flex">
+        <p class="col-lg-7 col-md-7 col-6 me-3 mb-0">Christopher Stephens</p>
+        <div class="socials col-lg-3 col-md-5 col-6">
+          <a href="https://www.linkedin.com/in/c-r-stephens/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:30px"></i></a>
+          <a href="https://github.com/Jtownokie" target="_blank"><i class="ms-3 fa fa-github-square" style="font-size:30px"></i></a>
+          <a href="#" target="_blank"><i class="ms-3 fa fa-laptop" style="font-size:30px"></i></a>
         </div>
       </div>
-      <div class="contact col-md-5 offset-md-1">
-        <div class="d-flex">
-        <h3>Atlas School</h3>
-        <img src="images/GC2UqzqXcAAB7dq.png" class="lumi d-flex justify-self-center align-self-center offset-1" style="width: 50px; height: 50px;"/>
-      </div>
-        <p>15 N Cheyenne Ave, Tulsa, OK 74103</p>
-        <p>(918) 392-5530</p>
+      <div class="contact-person d-flex">
+        <p class="col-lg-6 col-md-7 col-6 me-3 mb-0">Svitlana Pavlovska</p>
+        <div class="socials col-md-5 col-6">
+          <a href="https://www.linkedin.com/in/svitlana-pavlovska-833b43184/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:30px"></i></a>
+          <a href="https://github.com/SvitLanaPavl" target="_blank"><i class="ms-3 fa fa-github-square" style="font-size:30px"></i></a>
+          <a href="https://svitlanapavl.github.io/Portfolio/" target="_blank"><i class="ms-3 fa fa-laptop" style="font-size:30px"></i></a>
+        </div>
       </div>
     </div>
-    <p class="text-center opacity-50 copyright">© America's Natural Canvas</p>
-  </footer>
+    <div class="contact col-md-5 offset-md-1">
+      <div class="d-flex">
+      <h3>Atlas School</h3>
+      <img src="images/GC2UqzqXcAAB7dq.png" class="lumi d-flex justify-self-center align-self-center offset-1" style="width: 50px; height: 50px;"/>
+    </div>
+      <p>15 N Cheyenne Ave, Tulsa, OK 74103</p>
+      <p>(918) 392-5530</p>
+    </div>
+  </div>
+  <p class="text-center opacity-50 copyright">© America's Natural Canvas</p>
+</footer>
   </body>
   </html>
