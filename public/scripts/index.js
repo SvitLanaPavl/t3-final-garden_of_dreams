@@ -9,8 +9,11 @@ function initializeSearchBar() {
     if (event.which == 13) {
       event.preventDefault();
       $("#explore-map").hide();
+      $("#data-display").show();
       $("#landmark-carousel").empty();
-      $("#temp-chart").empty();
+      if (window.tempChart) {
+        window.tempChart.destroy();
+      }
       let searchValue = $("#search-bar").val();
       let searchCode = getStateCode(searchValue);
       console.log(searchCode);
