@@ -4,14 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>America's Natural Canvas</title>
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <!-- FireBase -->
+  <script defer src="/__/firebase/10.11.0/firebase-app-compat.js"></script>
+  <script defer src="/__/firebase/10.11.0/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/10.11.0/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  <!-- jQuery -->
+  <script defer src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- Chart.js-->
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <!-- Font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!-- Custom styles -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles/font-style.css">
   <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- Custom Scripts -->
+  <script defer type="module" src="./scripts/dbFunctions.js"></script>
+  <script defer type="module" src="./scripts/chartConfig.js"></script>
+  <script defer type="module" src="./scripts/dataPopulation.js"></script>
+  <script defer type="module" src="./scripts/index.js"></script>
 </head>
 
 <body>
@@ -28,8 +50,8 @@
     </button>
   <div class="collapse navbar-collapse justify-content-sm-end justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav">
-        <li class="nav-item text-center d-flex justify-content-center align-items-center"><a class="nav-link me-md-5" href="homepage.html" target="_blank">Home</a></li>
-        <li class="nav-item text-center d-flex justify-content-center align-items-center"><a class="nav-link me-md-5" href="explore.html" target="_blank">Explore</a></li>
+        <li class="nav-item text-center d-flex justify-content-center align-items-center"><a class="nav-link me-md-5" href="index.html">Home</a></li>
+        <li class="nav-item text-center d-flex justify-content-center align-items-center"><a class="nav-link me-md-5" href="explore.html">Explore</a></li>
         <li class="nav-item text-center d-flex justify-content-center align-items-center"><a class="nav-link" href="#footer">
           <button class="btn-tertiary" type="button">Contact</button>
         </a></li>
@@ -49,7 +71,7 @@
     <div class="container-lg container-fluid d-flex wrap justify-content-center">
       <div class="row w-100">
       <div class="col-lg-4 col-md-6 col-sm-12 pe-4">
-        <h6 class="text-white">KEYWORDS</h6>
+        <h6 class="text-white">SEARCH FOR STATE</h6>
         <div class="dropdown mb-3">
           <a class="rounded-0 btn dropdown-toggle text-start" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
             <div class="d-flex align-items-center">
@@ -67,7 +89,7 @@
         <h6 class="text-white">CHOOSE BY STATE</h5>
     <div class="dropdown w-100 mb-3">
       <a class="rounded-0 btn dropdown-toggle w-100 text-start text-white" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-        State
+        All
         <span class="float-end">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
               <path d="M1 5l7 7 7-7H1z"/>
@@ -76,9 +98,7 @@
       </a>
     
       <ul class="dropdown-menu rounded-0 w-100">
-        <li><a class="dropdown-item" href="#">Menu Item</a></li>
-        <li><a class="dropdown-item" href="#">Menu Item</a></li>
-        <li><a class="dropdown-item" href="#">Menu Item</a></li>
+        <!-- Dynamic States Dropdown Goes Here -->
       </ul>
     </div>
     </div>
@@ -86,7 +106,7 @@
       <h6 class="text-white">CHOOSE BY CLIMATE TYPE</h6>
     <div class="dropdown w-100 mb-3">
       <a class="btn rounded-0 dropdown-toggle w-100 text-start text-white" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-        Climate
+        All
         <span class="float-end">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
               <path d="M1 5l7 7 7-7H1z"/>
@@ -95,9 +115,16 @@
       </a>
     
       <ul class="dropdown-menu rounded-0 w-100">
-        <li><a class="dropdown-item" href="#">Menu Item</a></li>
-        <li><a class="dropdown-item" href="#">Menu Item</a></li>
-        <li><a class="dropdown-item" href="#">Menu Item</a></li>
+        <li><a class="dropdown-item" href="#">Alpine</a></li>
+        <li><a class="dropdown-item" href="#">Arid</a></li>
+        <li><a class="dropdown-item" href="#">Atlantic Coastal Plain</a></li>
+        <li><a class="dropdown-item" href="#">Continental</a></li>
+        <li><a class="dropdown-item" href="#">Desert</a></li>
+        <li><a class="dropdown-item" href="#">Humid Subtropical</a></li>
+        <li><a class="dropdown-item" href="#">Mediterranean</a></li>
+        <li><a class="dropdown-item" href="#">Oceanic</a></li>
+        <li><a class="dropdown-item" href="#">Steppe</a></li>
+        <li><a class="dropdown-item" href="#">Tropical</a></li>
       </ul>
     </div>
   </div>
@@ -554,25 +581,8 @@
   <section class="container-lg container-fluid p-5" id="data-display">
 <!-- Carousel -->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/natural.jpeg" class="d-block w-100" alt="...">
-      <div class="carousel-caption p-0">
-        <p class="place-caption d-none d-md-block p-0 mb-0">Some name</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="images/trees.jpeg" class="d-block w-100" alt="...">
-      <div class="carousel-caption p-0">
-        <p class="place-caption d-none d-md-block p-0 mb-0">Some name</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="images/image_720.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption p-0">
-        <p class="place-caption d-none d-md-block p-0 mb-0">Some name</p>
-      </div>
-    </div>
+  <div class="carousel-inner" id="landmark-carousel">
+    <!-- Dynamic Landmarks Go Here -->
   </div>
   <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -587,22 +597,16 @@
 <div class="content d-flex p-5">
 <div class="row">
 <div class="wording col-md-6 row">
-  <h2 class="text-secondary">State Name</h2>
+  <h2 class="text-secondary" id="state-name">State Name</h2>
   <ul class="data-ul pt-4">
     <li>Climate type - <span class="data-value text-primary" id="climate">Climate type</span></li>
     <li>State Tree - <span class="data-value text-primary" id="state-tree">State tree</span></li>
     <li>State Flower - <span class="data-value text-primary" id="state-flower">State flower</span></li>
-    <li>Landmarks: 
-      <ul class="landmarks">
-        <li class="data-value text-primary">Landmark 1</li>
-        <li class="data-value text-primary">Landmark 2</li>
-      </ul>
-    </li>
   </ul>
 </div>
 <div class="diagram col-md-6 row">
   <div class="graph pt-5 mt-md-5">
-    <img src="images/average-temperature-united-states-of-america-tulsa-oklahoma-us.png" class="img-fluid"/>
+    <canvas id="temp-chart"></canvas>
     <button class="btn-secondary mt-5">Back to the map</button>
   </div>
 </div>
@@ -645,12 +649,5 @@
     </div>
     <p class="text-center opacity-50 copyright">© America's Natural Canvas</p>
   </footer>
-    
-    <!-- Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- Custom js -->
-    <script src="scripts/scripts.js"></script>
   </body>
   </html>

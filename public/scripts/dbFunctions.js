@@ -9,6 +9,14 @@ export async function getStateName(code) {
   return docData.name;
 }
 
+// Function that returns state document 'climate' property
+export async function getClimate(code) {
+  const stateData = await db.doc(`/states/${code}`).get();
+  const docData = stateData.data();
+
+  return docData.climate;
+}
+
 // Function that returns state document 'state_tree' property
 export async function getStateTree(code) {
   const stateData = await db.doc(`/states/${code}`).get();
@@ -45,4 +53,22 @@ export async function getTemps(code) {
   });
 
   return parsedData;
+}
+
+// Function that returns an array of state names that match a certain climate type
+export async function getStateNamesByClimate(climateType) {
+  const stateArray = [];
+
+  db.collection("states").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        let docData = doc.data();
+        let docClimate = docData.climate;
+
+        if (docClimate.includes(climateType)) {
+          stateArray.push(docData.name);
+        }
+    });
+  });
+
+  return stateArray;
 }

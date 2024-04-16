@@ -39,7 +39,7 @@ export async function buildChart(code) {
     },
   };
   
-  const ctx = document.getElementById('myChart'); // Replace with correct chart ID
+  const ctx = document.getElementById('temp-chart'); // Replace with correct chart ID
 
   // Generate Chart
   new Chart(ctx, config);
